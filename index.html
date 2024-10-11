@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メンタルヘルスケア音声アプリ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* 背景色 */
+            color: #333; /* テキスト色 */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50; /* タイトル色 */
+            text-align: center;
+        }
+
+        #start-button {
+            background-color: #3498db; /* ボタンの背景色 */
+            color: white; /* ボタンのテキスト色 */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto 20px; /* 下にマージンを追加 */
+        }
+
+        #start-button:hover {
+            background-color: #2980b9; /* ホバー時の色 */
+        }
+
+        #text-input {
+            width: 100%; /* 入力フィールドを幅いっぱいに */
+            padding: 10px;
+            border: 1px solid #bdc3c7; /* 枠線 */
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px; /* 下にマージンを追加 */
+        }
+
+        #send-button {
+            background-color: #2ecc71; /* テキスト送信ボタンの背景色 */
+            color: white; /* テキスト送信ボタンのテキスト色 */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto; /* 中央寄せ */
+        }
+
+        #send-button:hover {
+            background-color: #27ae60; /* ホバー時の色 */
+        }
+
+        #result-text {
+            background-color: #ecf0f1; /* 結果表示エリアの背景色 */
+            border: 1px solid #bdc3c7; /* 枠線 */
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        #conversation-history {
+            border: 1px solid #bdc3c7; /* 枠線 */
+            border-radius: 5px;
+            padding: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 10px;
+            background-color: #ffffff; /* 会話履歴の背景色 */
+        }
+
+        .user-message {
+            color: #2c3e50; /* ユーザーのメッセージ色 */
+            margin: 5px 0;
+        }
+
+        .robot-message {
+            color: #27ae60; /* ロボットのメッセージ色 */
+            margin: 5px 0;
+        }
+
+        .gpt-message {
+            color: #8e44ad; /* ChatGPTのメッセージ色 */
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>メンタルヘルスケア音声アプリ</h1>
+
+    <button id="start-button">話す</button>
+    <input type="text" id="text-input" placeholder="ここに入力..." />
+    <button id="send-button">送信</button>
+    
+    <div id="result-text"></div> <!-- 音声認識結果を表示する場所 -->
+    
+    <div id="conversation-history"></div> <!-- 会話履歴を表示する場所 -->
+
+    <script src="app.js"></script>
+</body>
+</html>
